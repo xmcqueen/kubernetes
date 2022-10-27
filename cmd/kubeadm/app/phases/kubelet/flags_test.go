@@ -151,7 +151,8 @@ func TestBuildKubeletArgMap(t *testing.T) {
 			},
 			expected: map[string]string{
 				"container-runtime":          "remote",
-				"container-runtime-endpoint": "unix:///var/run/dockershim.sock",
+				"container-runtime-endpoint": "unix:///var/run/containerd/containerd.sock",
+				"pod-infra-container-image":  "registry.k8s.io/pause:3.7",
 			},
 		},
 	}
